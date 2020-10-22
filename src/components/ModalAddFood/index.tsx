@@ -36,15 +36,18 @@ const ModalAddFood: React.FC<IModalProps> = ({
   const formRef = useRef<FormHandles>(null);
 
   const handleSubmit = useCallback(
+
     async (data: ICreateFoodData) => {
       handleAddFood(data);
 
       setIsOpen();
     },
-    [handleAddFood, setIsOpen],
-  );
+
+
+  [handleAddFood, setIsOpen],);
 
   return (
+
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <Form ref={formRef} onSubmit={handleSubmit}>
         <h1>Novo Prato</h1>
@@ -62,6 +65,7 @@ const ModalAddFood: React.FC<IModalProps> = ({
         </button>
       </Form>
     </Modal>
+
   );
 };
 
